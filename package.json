@@ -1,17 +1,19 @@
 {
-  "name": "modal",
-  "version": "1.0.0",
-  "description": "",
+  "name": "more-one-framework",
+  "version": "0.1.0",
+  "description": "Just one more framework!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Diego Pancera e Sergio Junior",
+  "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.13",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.5.0"
   }
 }
