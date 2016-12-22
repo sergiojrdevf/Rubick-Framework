@@ -1,18 +1,12 @@
-(() => {
-	"use strict";
+"use strict";
 
-	class modal {
+class modal {
 
-		contruct(element){
-			this.element = document.querySelector(element);
-		}
-
-		show() {
-			console.log('Testando!');
-		}
+	contruct(element){
+		this.element = document.querySelector(element);
 	}
 
-	return modal;
-
-
-})();
+	show() {
+		console.log('Testando!');
+	}
+}

@@ -1,5 +1,5 @@
 {
-  "name": "more-one-framework",
+  "name": "Rubick - Framework",
   "version": "0.1.0",
   "description": "Just one more framework!",
   "main": "index.js",
@@ -11,9 +11,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
-    "gulp-clean-css": "^2.0.13",
+    "gulp-clean-css": "^2.3.2",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
-    "gulp-stylus": "^2.5.0"
+    "gulp-stylus": "^2.6.0"
   }
 }

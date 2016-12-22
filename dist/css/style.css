@@ -44,10 +44,114 @@
 .btn.primary-light:focus {
   background: #0177cb;
 }
-.btn.alert {
-  background: #fe0202;
+.btn.danger {
+  background: #fe0101;
   border: 0;
   color: #fff;
+}
+.btn.danger:hover {
+  background: #cb0101;
+}
+.btn.danger:focus {
+  background: #980101;
+}
+.btn.danger-dark {
+  background: #cb0101;
+  border: 0;
+  color: #fff;
+}
+.btn.danger-dark:hover {
+  background: #980101;
+}
+.btn.danger-dark:focus {
+  background: #600;
+}
+.btn.danger-light {
+  background: #fe3434;
+  border: 0;
+  color: #fff;
+}
+.btn.danger-light:hover {
+  background: #fe0101;
+}
+.btn.danger-light:focus {
+  background: #cb0101;
+}
+.input-group fieldset {
+  border: 0;
+}
+.input-group label {
+  display: inline-block;
+  font-size: 20px;
+  color: #636363;
+  font-weight: lighter;
+  vertical-align: top;
+  display: block;
+}
+.input-group fieldset legend {
+  display: none;
+}
+.input-group {
+  margin-bottom: 20px;
+}
+.input-group .label {
+  display: inline-block;
+  font-size: 20px;
+  color: #636363;
+  font-weight: lighter;
+  vertical-align: top;
+  display: block;
+}
+.input-group .input {
+  display: block;
+  width: 100%;
+  padding: 9px 5px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  background: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.input-group select {
+  height: 44px;
+}
+.input-group input[type=checkbox] + label {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border: 2px solid #656565;
+  border-radius: 2px;
+  font-size: 0;
+  position: relative;
+}
+.input-group input[type=checkbox]:checked + label:after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: #656565;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+}
+.input-group input[type=radio] + label {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid #656565;
+  position: relative;
+}
+.input-group input[type=radio]:checked + label:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background: #656565;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
 }
 @media screen and (min-width: 768px) {
   .col-2 {
@@ -104,12 +208,20 @@
   padding: 0;
   font-family: "Open Sans", sans-serif;
   outline: none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .container {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+}
+.buttons-group {
+  margin-bottom: 20px;
+}
+.hidden {
+  display: none !important;
 }
 .overlay {
   background: rgba(0,0,0,0.5);
@@ -165,6 +277,14 @@
 .overlay.active {
   opacity: 1;
   z-index: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .overlay.active .modal {
   opacity: 1;

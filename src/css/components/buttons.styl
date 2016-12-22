@@ -1,4 +1,5 @@
 $blue = #0295fe;
+$red = #fe0202;
 
 .btn {
 	cursor: pointer;
@@ -50,8 +51,39 @@ $blue = #0295fe;
 	}
 }
 
-.btn.alert {
-	background: #fe0202;
+
+.btn.danger {
+	background: lightness($red, 50%);
 	border: 0;
 	color: #fff;
+	&:hover {
+		background lightness($red, 40%);
+	}
+	&:focus {
+		background: lightness($red, 30%);
+	}
+}
+
+.btn.danger-dark {
+	background: lightness($red, 40%);
+	border: 0;
+	color: #fff;
+	&:hover {
+		background lightness($red, 30%);
+	}
+	&:focus {
+		background: lightness($red, 20%);
+	}
+}
+
+.btn.danger-light {
+	background: lightness($red, 60%);
+	border: 0;
+	color: #fff;
+	&:hover {
+		background lightness($red, 50%);
+	}
+	&:focus {
+		background: lightness($red, 40%);
+	}
 }
