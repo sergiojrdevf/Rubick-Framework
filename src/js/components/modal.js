@@ -9,28 +9,31 @@ class Modal {
 		if(toggle){
 			this.element.onclick = (event) => {
 				if (event.target === this.element){
-					this.show(false);
+					this.modal(false);
 				}
 			}
 		}
 	}
 	
-	on(event, element) {
+	onShow(event, element) {
 		if(!element) return false;
 
 		var elements = document.querySelectorAll(element);
 		elements.forEach((value) => {
 			value.addEventListener(event, () => {
-				this.show(true);
+				this.modal(true);
 			});
 		}, this);
 	}
 
-	show(bool = true) {	
+	modal(bool = true) {	
+		var old = this.element.className;
 		if(bool == true){
-			this.element.setAttribute('class', 'modal-overlay to-top active');
+			this.element.style.display = 'block';
+			this.element.setAttribute('class', `${old} active`);
 		}else{
-			this.element.setAttribute('class', 'modal-overlay');
+			this.element.style.display = 'none';
+			this.element.setAttribute('class', old);
 		}
 	}
 }

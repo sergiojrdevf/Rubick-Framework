@@ -1,2 +1,2 @@
 var modal = new Modal('.modal-overlay');
-modal.on('click', '.btn');
+modal.onShow('click', '.btn');

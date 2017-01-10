@@ -202,6 +202,7 @@
   display: none !important;
 }
 .modal-overlay {
+  display: none;
   background: rgba(0,0,0,0.5);
   position: fixed;
   height: 100%;
