@@ -1,5 +1,5 @@
 #Rubick Framework
-Just one more framework in javascript and css!
+Just one more framework with Javascript ES6 and CSS3!
 
 ## Getting Started
 
