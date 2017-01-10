@@ -1,4 +1,4 @@
-var m = new modal('.test');
+var m = new modal('.modal');
 m.show();
 
 var btn = document.querySelector('.btn');
