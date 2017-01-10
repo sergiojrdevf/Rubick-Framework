@@ -1,4 +1,4 @@
-.overlay {
+.modal-overlay {
 	background: rgba(0,0,0,0.5);
 	position: fixed;
 	height: 100%;
@@ -12,6 +12,7 @@
 	display: flex;
 	/* align-items: center; */
 	.modal {
+		z-index: 20;
 		box-sizing: border-box;
 		background: #fff;
 		margin: 0 15px;
@@ -45,7 +46,7 @@
 }
 
 
-.overlay.active {
+.modal-overlay.active {
 	opacity: 1;
 	z-index: 1;
 	display: flex;
@@ -56,14 +57,14 @@
 }
 
 /* Size */
-.overlay.size {
+.modal-modal-overlay.size {
 	.modal {
 		transform: scale(0);
 		transition: all 1s ease;
 	}
 }
 
-.overlay.size.active {
+.modal-overlay.size.active {
 	.modal {
 		transform: scale(1);
 	}
@@ -72,14 +73,14 @@
 
 
 /* Rotate */
-.overlay.rotate {
+.modal-overlay.rotate {
 	perspective: 1000px;
 	.modal {
 		transform: rotateX(90deg);
 	}
 }
 
-.overlay.rotate.active {
+.modal-overlay.rotate.active {
 	.modal {
 		transform: rotateX(0deg);
 	}
@@ -87,13 +88,13 @@
 
 
 /* To Top */
-.overlay.to-top {
+.modal-overlay.to-top {
 	.modal {
 		top: 0;
 	}
 }
 
-.overlay.to-top.active {
+.modal-overlay.to-top.active {
 	.modal {
 		top: 200px;
 	}
@@ -101,13 +102,13 @@
 
 
 /* To Bottom */
-.overlay.to-bottom {
+.modal-overlay.to-bottom {
 	.modal {
 		bottom: 0;
 	}
 }
 
-.overlay.to-bottom.active {
+.modal-overlay.to-bottom.active {
 	.modal {
 		bottom: 200px;
 	}
@@ -115,13 +116,13 @@
 
 
 /* Left */
-.overlay.to-left {
+.modal-overlay.to-left {
 	.modal {
 		left: -200%;
 	}
 }
 
-.overlay.to-left.active {
+.modal-overlay.to-left.active {
 	.modal {
 		left: 0;
 	}
@@ -129,13 +130,13 @@
 
 
 /* Right */
-.overlay.to-right {
+.modal-overlay.to-right {
 	.modal {
 		right: -200%;
 	}
 }
 
-.overlay.to-right.active {
+.modal-overlay.to-right.active {
 	.modal {
 		right: 0;
 	}
@@ -143,14 +144,14 @@
 
 
 /* Height */
-.overlay.height {
+.modal-overlay.height {
 	.modal {
 		height: 0;
 		overflow:  hidden;
 	}
 }
 
-.overlay.height.active {
+.modal-overlay.height.active {
 	.modal {
 		height: 200px;
 	}

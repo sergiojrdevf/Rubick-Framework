@@ -223,7 +223,7 @@
 .hidden {
   display: none !important;
 }
-.overlay {
+.modal-overlay {
   background: rgba(0,0,0,0.5);
   position: fixed;
   height: 100%;
@@ -241,7 +241,8 @@
   display: flex;
 /* align-items: center; */
 }
-.overlay .modal {
+.modal-overlay .modal {
+  z-index: 20;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background: #fff;
@@ -256,25 +257,25 @@
   height: auto;
 }
 @media screen and (min-width: 768px) {
-  .overlay .modal {
+  .modal-overlay .modal {
     max-width: 640px;
     margin: 0 auto;
   }
 }
-.overlay .modal .header,
-.overlay .modal .body,
-.overlay .modal .footer {
+.modal-overlay .modal .header,
+.modal-overlay .modal .body,
+.modal-overlay .modal .footer {
   padding: 10px 15px;
   border-bottom: 1px solid #d8d7d7;
 }
-.overlay .modal .body {
+.modal-overlay .modal .body {
   padding: 20px 10px;
 }
-.overlay .modal.alert .header {
+.modal-overlay .modal.alert .header {
   background: #fe0202;
   color: #fff;
 }
-.overlay.active {
+.modal-overlay.active {
   opacity: 1;
   z-index: 1;
   display: -webkit-box;
@@ -286,59 +287,59 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.overlay.active .modal {
+.modal-overlay.active .modal {
   opacity: 1;
 }
-.overlay.size .modal {
+.modal-modal-overlay.size .modal {
   -webkit-transform: scale(0);
   transform: scale(0);
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-.overlay.size.active .modal {
+.modal-overlay.size.active .modal {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.overlay.rotate {
+.modal-overlay.rotate {
   -webkit-perspective: 1000px;
   perspective: 1000px;
 }
-.overlay.rotate .modal {
+.modal-overlay.rotate .modal {
   -webkit-transform: rotateX(90deg);
   transform: rotateX(90deg);
 }
-.overlay.rotate.active .modal {
+.modal-overlay.rotate.active .modal {
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
-.overlay.to-top .modal {
+.modal-overlay.to-top .modal {
   top: 0;
 }
-.overlay.to-top.active .modal {
+.modal-overlay.to-top.active .modal {
   top: 200px;
 }
-.overlay.to-bottom .modal {
+.modal-overlay.to-bottom .modal {
   bottom: 0;
 }
-.overlay.to-bottom.active .modal {
+.modal-overlay.to-bottom.active .modal {
   bottom: 200px;
 }
-.overlay.to-left .modal {
+.modal-overlay.to-left .modal {
   left: -200%;
 }
-.overlay.to-left.active .modal {
+.modal-overlay.to-left.active .modal {
   left: 0;
 }
-.overlay.to-right .modal {
+.modal-overlay.to-right .modal {
   right: -200%;
 }
-.overlay.to-right.active .modal {
+.modal-overlay.to-right.active .modal {
   right: 0;
 }
-.overlay.height .modal {
+.modal-overlay.height .modal {
   height: 0;
   overflow: hidden;
 }
-.overlay.height.active .modal {
+.modal-overlay.height.active .modal {
   height: 200px;
 }

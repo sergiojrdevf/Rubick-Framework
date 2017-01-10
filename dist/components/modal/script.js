@@ -1,7 +1,2 @@
-var m = new modal('.modal');
-m.show();
-
-var btn = document.querySelector('.btn');
-btn.addEventListener('click', function() {
-	document.querySelector('.overlay').setAttribute('class', 'overlay to-top active');
-});
+var modal = new Modal('.modal-overlay');
+modal.on('click', '.btn');
