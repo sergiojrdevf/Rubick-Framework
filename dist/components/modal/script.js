@@ -1,5 +1,5 @@
 var modal = new Modal('.modal-overlay');
-modal.onShow('click', '.btn');
+modal.onShow('click', '.open-modal');
 
 modal.eventShow(() => {
     console.log('Modal Opening');
