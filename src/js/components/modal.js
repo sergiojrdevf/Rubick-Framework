@@ -7,19 +7,18 @@ class Modal {
 
 		var toggle = this.element.getAttribute('data-toggle');
 		if(toggle){
-			this.element.onclick = (event) => {
+			this.element.addEventListener('click', (event) => {
 				if (event.target === this.element){
 					this.modal(false);
 				}
-			}
+			});
 		}
 
 		var closes = this.element.querySelectorAll('[data-close]');
 		if(closes){
 			closes.forEach((value) => {
-				console.log(value.getAttribute('data-close'));
 				value.addEventListener('click', () => {
-					this.modal(true);
+					this.modal(false);
 				});
 			}, this);
 		}
@@ -37,18 +36,18 @@ class Modal {
 	}
 
 	modal(bool = true) {	
-		var old = this.element.className;
+		var oldClass = this.element.className;
 		var event;
 
-		if(bool == true){
+		if(bool === true){
 			//this.element.style.display = 'block';
-			this.element.setAttribute('class', `${old} active`);
+			this.element.classList.add('active');
 			
 			event = new CustomEvent('modal-show', {});
    			window.dispatchEvent(event);
 		}else{
 			//this.element.style.display = 'none';
-			this.element.setAttribute('class', old);
+			this.element.classList.remove('active');
 
 			event = new CustomEvent('modal-hide', {});
    			window.dispatchEvent(event);
