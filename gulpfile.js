@@ -32,8 +32,8 @@ gulp.task('script', function(){
 });
 
 gulp.task('watch', function() {
-	gulp.watch('src/css/components/*.styl', ['stylus', 'autoprefixer', 'script']);
-	
+	gulp.watch('src/css/components/**/*.styl', ['stylus', 'autoprefixer', 'script']);
+	gulp.watch('src/js/components/**/*.js', ['stylus', 'autoprefixer', 'script']);
 });
 
 gulp.task('default', ['stylus', 'autoprefixer', 'script']);
